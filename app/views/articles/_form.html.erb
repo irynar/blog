@@ -25,6 +25,15 @@
   </p>
 
   <p>
+    <% @tags.each do |tag| %>
+      <label>
+        <%= form.check_box :tag_ids, { multiple: true }, tag.id, @article.tags.include?(tag.id) %>
+        <%= tag.name %>
+      </label>
+    <% end %>
+  </p>
+
+  <p>
     <%= form.submit %>
   </p>
 

@@ -10,10 +10,12 @@ class ArticlesController < ApplicationController
 
   def new
     @article = Article.new
+    @tags = Tag.all
   end
 
   def edit
     @article = Article.find(params[:id])
+    @tags = Tag.all
   end
 
   def create
@@ -28,7 +30,7 @@ class ArticlesController < ApplicationController
 
   def update
     @article = Article.find(params[:id])
-
+    @tags = Tag.all
     if @article.update(article_params)
       redirect_to @article
     else
@@ -45,7 +47,7 @@ class ArticlesController < ApplicationController
 
   private
     def article_params
-      params.require(:article).permit(:title, :text)
+      params.require(:article).permit(:title, :text, :tag_ids => [])
     end
 
 end

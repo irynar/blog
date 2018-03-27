@@ -8,6 +8,11 @@
   <%= @article.text %>
 </p>
 
+<p>
+  <strong>Tags:</strong>
+  <%= @article.tags.pluck(:name).join(', ') %>
+</p>
+
 <h2>Comments</h2>
 <%= render @article.comments %>
 
