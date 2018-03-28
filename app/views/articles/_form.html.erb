@@ -24,6 +24,11 @@
     <%= form.text_area :text %>
   </p>
 
+  <div class="field">
+   Add an image:
+   <%= form.file_field :image %>
+ </div>
+
   <p>
     <% @tags.each do |tag| %>
       <label>
