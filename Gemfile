@@ -18,6 +18,7 @@ gem 'devise'
 gem 'carrierwave', '~> 1.0'
 gem 'mini_magick'
 gem 'kaminari'
+gem 'bootstrap4-kaminari-views'
 gem 'tinymce-rails'
 gem 'bootstrap', '~> 4.0.0'
 
